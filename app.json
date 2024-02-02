@@ -1,0 +1,35 @@
+{
+    "name": "AntiNSFW (@Qewertyy)",
+    "description": "A simple telegram bot to remove NSFW content from your groups",
+    "keywords": [
+        "telegram",
+        "bot",
+        "nsfw",
+        "qewertyy",
+        "anti-nsfw",
+        "AntiNSFW"
+    ],
+    "repository": "https://github.com/Qewertyy/AntiNSFWRobot",
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-python"
+        }
+    ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token. Get one from @BotFather duh",
+            "required": true,
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Get API_ID from my.telegram.org",
+            "required": true,
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get API_HASH from my.telegram.org",
+            "required": true,
+            "value": ""
+        }
+    }
+}
