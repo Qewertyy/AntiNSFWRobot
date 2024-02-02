@@ -162,3 +162,4 @@ logs.txt
 modules/database/data.db
 AntiNSFWRobot.session
 AntiNSFWRobot.session-journal
+.env
