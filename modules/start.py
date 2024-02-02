@@ -4,7 +4,7 @@ from pyrogram import Client, filters, types as t
 from bot import StartTime
 
 startText = """
-Just an AntiNSFW bot by `@Qewertyy`.
+An AntiNSFW bot Powered by @LexicaAPI to protect your groups from NSFW content.
 """
 
 @Client.on_message(filters.command(["start","help","repo","source"]))
