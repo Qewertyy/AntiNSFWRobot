@@ -31,10 +31,6 @@ class Bot(Client):
         )
     async def start(self):
         await super().start()
-        Config.BOT_USERNAME = (await self.get_me()).username
-        Config.START_TIME = StartTime
-        if Config.WEB_SERVER:
-            await create_server()
         LOGGER.info("Bot Started")
 
     async def stop(self):
