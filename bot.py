@@ -6,6 +6,7 @@ import datetime,logging, sys
 from pyrogram import Client
 from config import Config
 import httpx
+from web_utils import create_server
 
 # Get logging configurations
 logging.basicConfig(
@@ -30,6 +31,10 @@ class Bot(Client):
         )
     async def start(self):
         await super().start()
+        Config.BOT_USERNAME = (await self.get_me()).username
+        Config.START_TIME = StartTime
+        if Config.WEB_SERVER:
+            await create_server()
         LOGGER.info("Bot Started")
 
     async def stop(self):
